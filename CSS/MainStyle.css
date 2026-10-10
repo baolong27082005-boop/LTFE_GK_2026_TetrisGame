@@ -1,4 +1,91 @@
-#game-board{
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.main_container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.content {
     display: flex;
-    
+    align-items: flex-start;
+    gap: 25px;
+}
+
+#game-board {
+    width: 200px;
+    height: 400px;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    grid-template-rows: repeat(20, minmax(0, 1fr));
+    background: black;
+    border: 3px solid #555;
+}
+
+.cell {
+    border: 1px solid #444;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 150px;
+}
+
+.block_next_container,
+.score_container,
+.level_container {
+    padding: 10px;
+    background: #333;
+    border: 1px solid #555;
+    text-align: center;
+}
+
+.block_next_text,
+.score_text,
+.level_text {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.block_next_shape {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: #111;
+    border: 1px solid #555;
+}
+
+.score,
+.level {
+    font-size: 24px;
+}
+
+.play_again {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.play_again_btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
